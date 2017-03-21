@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "moduleResolution": "node",
+        "module": "commonjs"
+    },
+    "include": [
+        "./server-src/**/*.ts"
+    ],
+    "exclude": [
+        "./node_modules",
+        "./gulpfile.ts",
+        "./build"
+    ]
+}

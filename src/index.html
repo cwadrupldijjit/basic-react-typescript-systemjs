@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>Example React Project</title>
+    </head>
+    
+    <body>
+        <div id="mount"></div>
+        
+        <script src="/node_modules/core-js/client/shim.min.js"></script>
+        <script src="/node_modules/systemjs/dist/system.src.js"></script>
+        <script src="/system.config.js"></script>
+        <script>
+            var process = {
+                env: {}
+            };
+            System.import('App').catch(function(err) {console.error(err)});
+        </script>
+    </body>
+</html>
