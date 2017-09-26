@@ -5,7 +5,8 @@
         "module": "commonjs",
         "jsx": "react",
         "outDir": "./dist/",
-        "noEmitOnError": true
+        "noEmitOnError": true,
+        "lib": ["es6", "dom"]
     },
     "include": [
         "./src/**/*.tsx",

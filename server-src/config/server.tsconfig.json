@@ -2,7 +2,8 @@
     "compilerOptions": {
         "target": "es5",
         "moduleResolution": "node",
-        "module": "commonjs"
+        "module": "commonjs",
+        "lib": ["es6", "dom"]
     },
     "include": [
         "./server-src/**/*.ts"

@@ -10,7 +10,7 @@ function routeFiles(app: express.Application): express.Application {
     app.use('/node_modules', express.static(config.pathToNodeModules, { redirect: false }));
     app.use('/', express.static(config.pathToPublic, {redirect: false}));
     
-    app.all(/^\/$/, (req, res, next) => {
+    app.all('/*', (req, res, next) => {
         res.sendFile('index.html', {root: config.pathToPublic});
     });
     
@@ -39,7 +39,7 @@ function logFileAccess(options = {}) {
                 console.log(chalk.bold.red('Error! Could not find file at path', requestPath));
                 console.log(chalk.bold.red('Tried to pull from ', filePath), '\n');
                 
-                return res.status(404).send('Could not find file at ' + requestPath);
+                // return res.status(404).send('Could not find file at <code>' + requestPath + '</code>');
             }
             console.log(chalk.bold.cyan(filePath + '\n'));
         }
